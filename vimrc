@@ -15,16 +15,14 @@ if exists('*minpac#init')
   call minpac#add('https://github.com/easymotion/vim-easymotion.git')
   call minpac#add('https://github.com/scrooloose/nerdtree.git')
   call minpac#add('https://github.com/airblade/vim-gitgutter.git')
-  call minpac#add('https://github.com/Yggdroot/indentLine.git')
   call minpac#add('https://github.com/vim-airline/vim-airline.git')
-  call minpac#add('https://github.com/kien/ctrlp.vim.git')
+  call minpac#add('https://github.com/ctrlpvim/ctrlp.vim.git')
   call minpac#add('https://github.com/scrooloose/nerdcommenter.git')
   call minpac#add('https://github.com/w0rp/ale.git')
   call minpac#add('https://github.com/kshenoy/vim-signature.git')
   call minpac#add('https://github.com/tpope/vim-surround.git')
   call minpac#add('https://github.com/tpope/vim-fugitive.git')
   call minpac#add('https://github.com/plasticboy/vim-markdown.git')
-  call minpac#add('https://github.com/octol/vim-cpp-enhanced-highlight.git')
   call minpac#add('https://github.com/lifepillar/vim-mucomplete.git')
   call minpac#add('https://github.com/majutsushi/tagbar.git')
   call minpac#add('https://github.com/junegunn/fzf.git')
@@ -57,6 +55,9 @@ let g:gruvbox_invert_selection=0 " fixes visual mode highlight
 
 set background=dark
 if has('gui_running')
+  set guioptions-=T " remove toolbar
+  set guioptions-=L " remove left scroll bar
+  set guioptions-=r " remove right scroll bar
   colorscheme gruvbox
 else
   set t_Co=256
